@@ -19,7 +19,10 @@ Post.init(
       },
       calories: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: false,
+        validate: {
+          isNumeric: true
+        }
       },
       user_id: {
         type: DataTypes.INTEGER,
