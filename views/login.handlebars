@@ -1,31 +1,52 @@
-<form class="login-form">
-    <div>
-      <label for="email-login">email:</label>
-      <input type="text" id="email-login" />
+<div class="container">
+    <div class="card small">
+        <div class="card-content">
+            <span class="card-title">login</span>
+                <form action="" class="login-form col">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <div>
+                            <label for="email-login">email:</label>
+                            <input type="text" id="email-login" />
+                            </div>
+                            <div>
+                            <label for="password-login">password:</label>
+                            <input type="password" id="password-login" />
+                            </div>
+                            <div>
+                            <button type="submit">login</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+        </div>
     </div>
-    <div>
-      <label for="password-login">password:</label>
-      <input type="password" id="password-login" />
+</div>
+      
+
+<!--signup-->
+<div class="container">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">Create Account</span>
+                <form class="signup-form">
+                    <div>
+                    <label for="username-signup">username:</label>
+                    <input type="text" id="username-signup" />
+                    </div>
+                    <div>
+                    <label for="email-signup">email:</label>
+                    <input type="text" id="email-signup" />
+                    </div>
+                    <div>
+                    <label for="password-signup">password:</label>
+                    <input type="password" id="password-signup" />
+                    </div>
+                    <div>
+                    <button type="submit">signup</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div>
-      <button type="submit">login</button>
-    </div>
-  </form>
-  <form class="signup-form">
-    <div>
-      <label for="username-signup">username:</label>
-      <input type="text" id="username-signup" />
-    </div>
-    <div>
-      <label for="email-signup">email:</label>
-      <input type="text" id="email-signup" />
-    </div>
-    <div>
-      <label for="password-signup">password:</label>
-      <input type="password" id="password-signup" />
-    </div>
-    <div>
-      <button type="submit">signup</button>
-    </div>
-  </form>
   <script src="/javascript/login.js"></script>
