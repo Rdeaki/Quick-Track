@@ -21,6 +21,7 @@
 						<div class="row">
 							<div class="input-field col s6">
 								<input
+									name="post-title"
 									type="text"
 									placeholder="Add Item"
 									id="item-name"
@@ -29,6 +30,7 @@
 							</div>
 							<div class="input-field col s6">
 								<input
+									name="post-calories"
 									type="number"
 									placeholder="Add Calories"
 									id="item-calorie"
@@ -47,10 +49,7 @@
 								&nbsp;&nbsp; Update Meal
 							</button>
 
-							<button class="delete-btn btn red">
-								<i class="fa fa-remove"></i>
-								&nbsp;&nbsp; Delete Meal
-							</button>
+
 
 							<button class="back-btn btn grey pull-right">
 								<i class="fa fa-chevron-circle-left"></i>
@@ -62,6 +61,7 @@
 			</div>
 
 			<!-- Food items list  -->
+			{{#if loggedIn}}
 			<ul id="item-list" class="collection">
                 {{#each posts as |post|}}
 				 <li class="collection-item" id="item-0">
@@ -69,6 +69,7 @@
 				</li>
                 {{/each}}
 			</ul>
+			{{/if}}
 
 			 <table id="table1" style="font-size: 18px;">
 				<tr>
@@ -79,3 +80,8 @@
 				</tr>
 			</table>
 		</div>
+
+{{#if loggedIn}}
+<script src="/javascript/delete-meal.js"></script>
+<script src="/javascript/add-meal.js"></script>
+{{/if}}

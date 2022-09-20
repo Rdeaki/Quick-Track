@@ -1,25 +1,29 @@
 async function newFormHandler(event) {
-    event.preventDefault();
-  
-    const title = document.querySelector('input[name="post-title"]').value;
-    const post_url = document.querySelector('input[name="post-url"]').value;
-  
-    const response = await fetch(`/api/posts`, {
+  event.preventDefault();
+
+  // Get the post title and calorie count from the form
+  const title = document.querySelector('input[name="post-title"]').value;
+  const calories = document.querySelector('input[name="post-calories"]').value;
+
+  // use the add a new post POST route to add the post 
+  // user id is added from the session information in the route
+  const response = await fetch(`/api/posts`, {
       method: 'POST',
       body: JSON.stringify({
         title,
-        post_url
+        calories
       }),
       headers: {
         'Content-Type': 'application/json'
       }
     });
-  
+
     if (response.ok) {
-      document.location.replace('/dashboard');
+      document.location.replace('/');
     } else {
       alert(response.statusText);
     }
-  }
-  
-  document.querySelector('.new-post-form').addEventListener('submit', newFormHandler);
+}
+
+
+document.querySelector('.add-btn').addEventListener('submit', newFormHandler);
