@@ -11,7 +11,7 @@ const hbs = exphbs.create({});
 
 
 const sess = {
-  secret: process.env.SERVER_SECRET,
+  secret: "pikachu",
   cookie: {},
   resave: false,
   saveUninitialized: true,
