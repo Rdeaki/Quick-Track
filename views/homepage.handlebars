@@ -64,9 +64,7 @@
 			{{#if loggedIn}}
 			<ul id="item-list" class="collection">
                 {{#each posts as |post|}}
-				 <li class="collection-item" id="item-0">
                     {{> post-info post}}
-				</li>
                 {{/each}}
 			</ul>
 			{{/if}}
@@ -84,4 +82,5 @@
 {{#if loggedIn}}
 <script src="/javascript/delete-meal.js"></script>
 <script src="/javascript/add-meal.js"></script>
+<script src="/javascript/edit.js"></script>
 {{/if}}
