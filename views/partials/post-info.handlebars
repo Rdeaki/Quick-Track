@@ -1,8 +1,7 @@
-<strong>{{title}}</strong> <em>{{calories}} Calories</em>
-<a href="/post/{{id}}" class="secondary-content">
-<button class="delete-btn btn red">
-<i class="fa fa-remove"></i>
-&nbsp;&nbsp; Delete Meal
-</button>
-	<i class="fa fa-pencil"></i>
-</a>
+<div id="{{id}}">
+	<strong>{{title}}</strong> <em>{{calories}} Calories</em>
+	<a id='{{id}}' href="/post/{{id}}" class="post-id secondary-content">
+		<i id="delete-meal" class="fa fa-trash"></i>
+		<i id="edit-post" class="fa fa-pencil"></i>
+	</a>
+</div>
