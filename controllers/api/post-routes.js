@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Post, User } = require('../../models');
 const sequelize = require('../../config/connection');
+const withAuth = require('../../utils/auth');
 
 // get all users
 router.get('/', (req, res) => {
@@ -9,7 +10,8 @@ router.get('/', (req, res) => {
         'id',
         'calories',
         'title',
-        'created_at'
+        'created_at',
+        'user_id'
       ],
       order: [['created_at', 'DESC']], 
       include: {
@@ -55,7 +57,7 @@ router.get('/:id', (req, res) => {
         });
 });
 
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     Post.create({
       title: req.body.title,
       calories: req.body.calories,
