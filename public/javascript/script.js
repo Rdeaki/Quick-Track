@@ -2,9 +2,9 @@ const ctx = document.getElementById('myChart');
 const myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: ['Red', 'white', 'Yellow'],
+        labels: ['calories', 'white', 'Yellow'],
         datasets: [{
-            label: '# of Calories',
+            label: 'calories',
             data: [84, 16],
             backgroundColor: [
                 'rgb(60,179,113)',
