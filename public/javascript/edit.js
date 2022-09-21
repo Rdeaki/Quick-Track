@@ -1,9 +1,11 @@
 async function editFormHandler(event) {
     event.preventDefault();
   
-    const title = document.querySelector('input[name="post-title"]').value.trim();
-    const calories = document.querySelector('input[name="post-calories"]').value.trim();
-      const id = document.querySelector('.post-id').getAttribute('id');
+    const title = document.querySelector('input[name="post-title"]').value;
+    const calories = document.querySelector('input[name="post-calories"]').value;
+    const id = window.location.toString().split('/')[
+      window.location.toString().split('/').length - 1
+    ];
 
     const response = await fetch(`/api/posts/${id}`, {
       method: 'PUT',
@@ -23,7 +25,21 @@ async function editFormHandler(event) {
     }
   }
   
-  document.querySelector('.edit-post').addEventListener('submit', editFormHandler);
+document.querySelector('.edit-post-form').addEventListener('submit', editFormHandler);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //$(document).find('.tbl_user_data').html(tbl);
 //
