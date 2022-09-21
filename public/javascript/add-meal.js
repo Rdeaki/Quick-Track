@@ -20,10 +20,11 @@ async function newFormHandler(event) {
 
     if (response.ok) {
       document.location.replace('/');
+      console.log('It works!')
     } else {
       alert(response.statusText);
     }
 }
 
 
-document.querySelector('.add-btn').addEventListener('submit', newFormHandler);
+document.querySelector('.add-btn').addEventListener('click', newFormHandler);
