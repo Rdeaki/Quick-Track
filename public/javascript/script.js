@@ -2,14 +2,15 @@ const ctx = document.getElementById('myChart');
 const myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: ['Red', 'white', 'Yellow'],
+        labels: ['Red', 'Blue', 'Yellow', 'Green'],
         datasets: [{
             label: '# of Calories',
-            data: [84, 16],
+            data: [25,25,25,25],
             backgroundColor: [
-                'rgb(60,179,113)',
-                'rgb(255,255,255)',
-                'rgb(255, 205, 86)'
+                'red',
+                'blue',
+                'yellow',
+                'green',
             ],
             hoverOffset: 4,
             
@@ -18,4 +19,5 @@ const myChart = new Chart(ctx, {
     
 
 });
+
 
