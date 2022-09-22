@@ -6,7 +6,7 @@
 and calorie inputs for the user.
 3. Target audience- weightlifters, gym members, people who want a more structured fitness routine.
 4. tasks- 
-  * Joseph Jones- Breating the readme, helped with handlebars
+  * Joseph Jones- Creating the readme, helped with handlebars
   * Kasey Crocker- Backend server work, primary handlebars writer
   * Rick Deakins- Primary front end writer, website designer
   * Trevor Grilley- Frontend Javascript writer
