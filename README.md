@@ -6,10 +6,10 @@
 and calorie inputs for the user.
 3. Target audience- weightlifters, gym members, people who want a more structured fitness routine.
 4. tasks- 
-  Joseph Jones- creating the readme, helped with handlebars
-  Kasey Crocker- backend server work, primary handlebars writer
-  Rick Deakins- primary front end writer, website designer
-  Trevor Grilley-
+  * Joseph Jones- Breating the readme, helped with handlebars
+  * Kasey Crocker- Backend server work, primary handlebars writer
+  * Rick Deakins- Primary front end writer, website designer
+  * Trevor Grilley- Frontend Javascript writer
   
   ## Deployed Link
   https://fast-tundra-42465.herokuapp.com/
