@@ -3,6 +3,8 @@ const sequelize = require('../config/connection');
 const { Post, User } = require('../models');
 const withAuth = require('../utils/auth');
 
+
+
 router.get('/', withAuth, (req, res) => {
   console.log(req.session);
   Post.findAll({
@@ -20,8 +22,13 @@ router.get('/', withAuth, (req, res) => {
   })
     .then(dbPostData => {
       const posts = dbPostData.map(post => post.get({ plain: true }));
+      const userId = function(user_id) {
+        if(user_id === req.session.user_id)
+        return true
+      };
       res.render('homepage', {
         posts,
+        user: userId(req.body.user_id),
         loggedIn: req.session.loggedIn
       });
     })
