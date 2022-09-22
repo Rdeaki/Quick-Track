@@ -18,13 +18,12 @@ postData().then(data => {
         function(index){
             return index.title;
         });
-        
+
     console.log(calories);
     myChart.data.labels = title;
     myChart.data.datasets[0].data = calories;
     myChart.update();
 })
-
 
 const ctx = document.getElementById('myChart');
 const myChart = new Chart(ctx, {
